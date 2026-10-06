@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos y Servicios - Mi Emprendimiento / My Business</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>TecnoNexo</h1>
+        <p class="slogan">Proyecto Interdisciplinario: Taller de Informática + Inglés</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyecto.html">El Proyecto</a></li>
+                <li><a href="productos.html">Productos y Servicios</a></li>
+                <li><a href="carrito.html" id="link-carrito">Carrito <span id="contador-nav"></span></a></li>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="conclusion.html">Conclusión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="catalogo">
+            <h2>Nuestros productos y servicios / Our products and services</h2>
+            <p>Elegí uno o más productos/servicios reales (inventados o basados en una idea real) y completá cada ficha en español e inglés.</p>
+
+            <!-- BUSCADOR: filtra las fichas de abajo mientras el usuario escribe. No hace falta tocar esto. -->
+            <div class="buscador">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="input-buscar" placeholder="Buscar producto... / Search product...">
+            </div>
+
+            <!-- TAREA: Completá cada ficha con nombre, precio en pesos, descripción bilingüe e imagen. -->
+            <!-- IMPORTANTE: el atributo data-nombre y data-precio-ars son los que usa el carrito y el buscador. -->
+            <!-- data-precio-ars debe ser SOLO UN NÚMERO (sin $, sin puntos de miles, sin texto). -->
+            <!-- El precio en dólares NO se carga a mano: lo calcula solo el sitio usando la cotización -->
+            <!-- del dólar blue que van a cargar en el Paso 6 de la guía (variable en js/script.js). -->
+            <!-- Podés agregar más fichas copiando el bloque completo <div class="tarjeta-producto">...</div> -->
+            <div class="grid-tarjetas">
+
+                <div class="tarjeta-producto" data-nombre="Placa de video RTX 4060" data-precio-ars="650000">
+                    <span class="etiqueta etiqueta-oferta">Oferta / Sale</span>
+                    <img src="https://imgs.search.brave.com/9q8b7FMk-nVjMdjYadeddcFbiBv8nWg1mDTU7pPOPbI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9OUV9OUF85/MzM2NjgtTUxVNzA2/NjA0MTEwNDFfMDcy/MDIzLU8ud2VicA" alt="Placa de video RTX 4060" class="imagen-centrada">
+                    <h3>Placa de video RTX 4060</h3>
+                    <p class="precio">$ 650.000 ARS <span class="precio-usd-auto"></span></p>
+                    <p><b>ES:</b> Placa de video ideal para gaming y edición de video, con 8GB de memoria dedicada.</p>
+                    <br>
+                    <p><b>EN:</b> Graphics card ideal for gaming and video editing, with 8GB of dedicated memory.</p>
+
+                    <div class="selector-cantidad">
+                        <label>Cantidad / Quantity:</label>
+                        <button class="btn-cantidad" data-accion="restar">−</button>
+                        <input type="number" class="input-cantidad" value="1" min="1">
+                        <button class="btn-cantidad" data-accion="sumar">+</button>
+                    </div>
+
+                    <button class="boton-agregar">Agregar al carrito / Add to cart</button>
+                </div>
+
+                <div class="tarjeta-producto" data-nombre="Teclado mecánico RGB" data-precio-ars="45000">
+                    <span class="etiqueta etiqueta-stock">Últimas unidades / Few left</span>
+                    <img src="https://imgs.search.brave.com/PEfiydEQLu41Lj-EIJ5b_F7enr4c-dHe00WdPJkNgYo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzkyMTk4OS1NQ084/NTkzNTgyODc5MV8w/NjIwMjUtVi53ZWJw" alt="Teclado mecánico RGB" class="imagen-centrada">
+                    <h3>Teclado mecánico RGB</h3>
+                    <p class="precio">$ 45.000 ARS <span class="precio-usd-auto"></span></p>
+                    <p><b>ES:</b> Teclado mecánico con retroiluminación RGB personalizable y switches resistentes.</p>
+                    <br>
+                    <p><b>EN:</b> Mechanical keyboard with customizable RGB backlighting and durable switches.</p>
+
+                    <div class="selector-cantidad">
+                        <label>Cantidad / Quantity:</label>
+                        <button class="btn-cantidad" data-accion="restar">−</button>
+                        <input type="number" class="input-cantidad" value="1" min="1">
+                        <button class="btn-cantidad" data-accion="sumar">+</button>
+                    </div>
+
+                    <button class="boton-agregar">Agregar al carrito / Add to cart</button>
+                </div>
+
+                <div class="tarjeta-producto" data-nombre="Mouse gamer inalámbrico" data-precio-ars="28000">
+                    <img src="https://imgs.search.brave.com/WtvWDEYUr1zYjnwAP9kCXGD428OBIHMCrypbaH8ksOo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFxZGJrMVhBUkwu/anBn" alt="Mouse gamer inalámbrico" class="imagen-centrada">
+                    <h3>Mouse gamer inalámbrico</h3>
+                    <p class="precio">$ 28.000 ARS <span class="precio-usd-auto"></span></p>
+                    <p><b>ES:</b> Mouse inalámbrico de alta precisión, ideal para juegos competitivos.</p>
+                    <br>
+                    <p><b>EN:</b> High-precision wireless mouse, ideal for competitive gaming.</p>
+
+                    <div class="selector-cantidad">
+                        <label>Cantidad / Quantity:</label>
+                        <button class="btn-cantidad" data-accion="restar">−</button>
+                        <input type="number" class="input-cantidad" value="1" min="1">
+                        <button class="btn-cantidad" data-accion="sumar">+</button>
+                    </div>
+
+                    <button class="boton-agregar">Agregar al carrito / Add to cart</button>
+                </div>
+
+                <div class="tarjeta-producto" data-nombre="Memoria RAM 16GB DDR4" data-precio-ars="38000">
+                    <img src="https://imgs.search.brave.com/cnGa4QeGg0k9SPkqm6AlParn17yKdV-gDp8qawmX_QM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzY5MDI5Ni1NTFU3/Nzg0NjMzODc1N18w/NzIwMjQtRS53ZWJw" alt="Memoria RAM 16GB DDR4" class="imagen-centrada">
+                    <h3>Memoria RAM 16GB DDR4</h3>
+                    <p class="precio">$ 38.000 ARS <span class="precio-usd-auto"></span></p>
+                    <p><b>ES:</b> Módulo de memoria RAM de 16GB, ideal para mejorar el rendimiento en juegos y tareas multitarea.</p>
+                    <br>
+                    <p><b>EN:</b> 16GB RAM module, ideal for improving performance in games and multitasking.</p>
+
+                    <div class="selector-cantidad">
+                        <label>Cantidad / Quantity:</label>
+                        <button class="btn-cantidad" data-accion="restar">−</button>
+                        <input type="number" class="input-cantidad" value="1" min="1">
+                        <button class="btn-cantidad" data-accion="sumar">+</button>
+                    </div>
+
+                    <button class="boton-agregar">Agregar al carrito / Add to cart</button>
+                </div>
+
+                <div class="tarjeta-producto" data-nombre="Auriculares gamer con micrófono" data-precio-ars="32000">
+                    <img src="https://imgs.search.brave.com/Dc1_1XCwwQWBFfevJ9xpQBZdc44djVHu0j6pX8SyuHU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9OUV9OUF83/ODIwODctTUxBMzI1/NTUyNjAzNTFfMTAy/MDE5LVYud2VicA" alt="Auriculares gamer con micrófono" class="imagen-centrada">
+                    <h3>Auriculares gamer con micrófono</h3>
+                    <p class="precio">$ 32.000 ARS <span class="precio-usd-auto"></span></p>
+                    <p><b>ES:</b> Auriculares con sonido envolvente y micrófono desmontable, cómodos para largas sesiones de juego.</p>
+                    <br>
+                    <p><b>EN:</b> Headset with surround sound and a detachable microphone, comfortable for long gaming sessions.</p>
+
+                    <div class="selector-cantidad">
+                        <label>Cantidad / Quantity:</label>
+                        <button class="btn-cantidad" data-accion="restar">−</button>
+                        <input type="number" class="input-cantidad" value="1" min="1">
+                        <button class="btn-cantidad" data-accion="sumar">+</button>
+                    </div>
+
+                    <button class="boton-agregar">Agregar al carrito / Add to cart</button>
+                </div>
+
+            </div>
+
+            <p id="sin-resultados">No se encontraron productos con ese nombre. / No products found with that name.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Proyecto Interdisciplinario — Taller de Informática e Inglés</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info - Mi Emprendimiento / My Business</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>TecnoNexo</h1>
+        <p class="slogan">Proyecto Interdisciplinario: Taller de Informática + Inglés</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyecto.html">El Proyecto</a></li>
+                <li><a href="productos.html">Productos y Servicios</a></li>
+                <li><a href="carrito.html">Carrito <span id="contador-nav"></span></a></li>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="conclusion.html">Conclusión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="metodos-pago">
+            <h2>Métodos de pago / Payment methods</h2>
+            <!-- TAREA: Dejen los métodos que realmente acepta su emprendimiento; pueden borrar los que no usen -->
+            <div class="grid-metodos-pago">
+                <div class="metodo-pago">
+                    <i class="fa-solid fa-money-bill-wave"></i>
+                    <p>Efectivo / Cash</p>
+                </div>
+                <div class="metodo-pago">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <p>Transferencia bancaria / Bank transfer</p>
+                </div>
+                <div class="metodo-pago">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <p>Pedidos por WhatsApp / Orders via WhatsApp</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="envios-devoluciones">
+            <h2>Envíos y devoluciones / Shipping and returns</h2>
+
+            <h3>Envíos / Shipping</h3>
+            <br>
+            <p><b>Español:</b> Enviamos a todo el país a través de correo o cadetería, según la zona. El costo se calcula al finalizar la compra y el tiempo de entrega estimado es de 3 a 7 días hábiles.</p>
+            <br>
+            <p><b>English:</b> We ship nationwide by mail or local courier, depending on the area. The cost is calculated at checkout and the estimated delivery time is 3 to 7 business days.</p>
+            <br>
+            <h3>Devoluciones / Returns</h3>
+            <br>
+            <p><b>Español:</b> Aceptamos devoluciones o cambios dentro de los 10 días de recibido el producto, siempre que esté sin usar y en su empaque original.</p>
+            <br>
+            <p><b>English:</b> We accept returns or exchanges within 10 days of receiving the product, as long as it is unused and in its original packaging.</p>
+        </section>
+
+        <section id="faq">
+            <h2>Preguntas frecuentes / FAQ</h2>
+            <p>Hacé clic en cada pregunta para ver la respuesta. / Click each question to see the answer.</p>
+
+            <!-- TAREA: Completá la respuesta de cada pregunta, en español e inglés, con <br> entre ambos bloques -->
+            <!-- Pueden agregar más preguntas copiando un bloque <button class="acordeon-faq">...</button><div class="panel-faq">...</div> completo -->
+
+            <button class="acordeon-faq">¿Cuánto tarda el envío? / How long does shipping take?</button>
+            <div class="panel-faq">
+                <p><b>Español:</b> El envío demora entre 3 y 7 días hábiles, dependiendo de la zona.</p>
+                <br>
+                <p><b>English:</b> Shipping takes between 3 and 7 business days, depending on the area.</p>
+            </div>
+
+            <button class="acordeon-faq">¿Qué medios de pago aceptan? / What payment methods do you accept?</button>
+            <div class="panel-faq">
+                <p><b>Español:</b> Aceptamos efectivo y transferencia bancaria. También podés hacer tu pedido directamente por WhatsApp.</p>
+                <br>
+                <p><b>English:</b> We accept cash and bank transfer. You can also place your order directly via WhatsApp.</p>
+            </div>
+
+            <button class="acordeon-faq">¿Puedo cambiar o devolver un producto? / Can I exchange or return a product?</button>
+            <div class="panel-faq">
+                <p><b>Español:</b> Sí, aceptamos cambios o devoluciones dentro de los 10 días de recibido el producto, siempre que esté sin usar.</p>
+                <br>
+                <p><b>English:</b> Yes, we accept exchanges or returns within 10 days of receiving the product, as long as it is unused.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Proyecto Interdisciplinario — Taller de Informática e Inglés</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

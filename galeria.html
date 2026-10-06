@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Mi Emprendimiento / My Business</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>TecnoNexo</h1>
+        <p class="slogan">Proyecto Interdisciplinario: Taller de Informática + Inglés</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyecto.html">El Proyecto</a></li>
+                <li><a href="productos.html">Productos y Servicios</a></li>
+                <li><a href="carrito.html">Carrito <span id="contador-nav"></span></a></li>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="conclusion.html">Conclusión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="galeria-imagenes">
+            <h2>Galería de imágenes / Image gallery</h2>
+            <div class="galeria-grid">
+                <img src="https://images.pexels.com/photos/7915212/pexels-photo-7915212.jpeg?w=1260&h=750&dpr=1" alt="Setup gamer con PC y luces RGB">
+                <img src="https://images.pexels.com/photos/7915216/pexels-photo-7915216.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Estaciones gamer con teclados iluminados">
+                <img src="https://images.pexels.com/photos/7915220/pexels-photo-7915220.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Amigos jugando en PC gamer">
+                <img src="https://images.pexels.com/photos/7915255/pexels-photo-7915255.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Grupo jugando en arcade gamer">
+                <img src="https://images.pexels.com/photos/6125335/pexels-photo-6125335.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Sala gamer con iluminación azul">
+                <img src="https://images.pexels.com/photos/9072394/pexels-photo-9072394.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Setup gamer con luces RGB y sillas">
+            </div>
+        </section>
+
+        <section id="galeria-videos">
+            <h2>Video de presentación / Presentation video</h2>
+            <!-- TAREA: Si tienen un video (publicidad, demo del producto, pitch), insértenlo acá. -->
+            <!-- Si no tienen video propio, pueden buscar uno de referencia sobre emprendimientos similares. -->
+            <div class="video-item">
+                <video controls width="100%">
+                    <source src="https://manuals.plus/m/34e22d3613e69c72112d5e1788ecf54e6025d0698b610b2c3bba1a7a1c5f2cbb.mp4" type="video/mp4">
+                    Tu navegador no puede reproducir este video.
+                </video>
+            
+                <p>Video de presentación de TecnoNexo.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- LIGHTBOX: se abre al hacer clic en una imagen de la galería -->
+    <div class="lightbox-overlay" id="lightbox-overlay">
+        <span class="lightbox-cerrar" id="lightbox-cerrar">&times;</span>
+        <img src="" alt="" id="lightbox-imagen">
+    </div>
+
+    <footer>
+        <p>© 2026 Proyecto Interdisciplinario — Taller de Informática e Inglés</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
